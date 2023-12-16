@@ -14,7 +14,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
   <link rel="icon" href="https://www.allinonecalculator.com/images/logo.png" type="image/icon type">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
+    .title:hover {
+      display: inline-block;
+
+      animation: rubberBand;
+      /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 2s;
+      /* don't forget to set a duration! */
+    }
+
     .footer-section a:hover {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
@@ -22,7 +33,7 @@
     * {
       scroll-behavior: smooth;
     }
-    
+
     img {
       display: flex;
       align-items: center;
@@ -101,7 +112,7 @@
 </head>
 
 <body>
-  <div class="bg-white">
+  <div class="bg-black text-white p-4">
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
@@ -112,12 +123,14 @@
         </div>
         <div class="hidden lg:flex lg:items-center lg:space-x-4">
           <!-- Desktop navigation links -->
-          <a href="./index.html" class="text-gray-900 hover:text-purple-500 hover:font-semibold" style="font-family: 'Raleway', sans-serif;">Home</a>
-          <a href="#about" class="text-gray-900 hover:text-purple-500 hover:font-semibold"
+          <a href="./index.html" class="text-white hover:text-purple-500 hover:font-semibold"
+            style="font-family: 'Raleway', sans-serif;">Home</a>
+          <a href="#about" class="text-white hover:text-purple-500 hover:font-semibold"
             style="font-family: 'Raleway', sans-serif;">About</a>
-          <a href="#features" class="text-gray-900 hover:text-purple-500 hover:font-semibold"
+          <a href="#features" class="text-white hover:text-purple-500 hover:font-semibold"
             style="font-family: 'Raleway', sans-serif;">Features</a>
-          <a href="#contact" class="text-gray-900 hover:text-purple-500 hover:font-semibold" style="font-family: 'Raleway', sans-serif;">Contact</a>
+          <a href="#contact" class="text-white hover:text-purple-500 hover:font-semibold"
+            style="font-family: 'Raleway', sans-serif;">Contact</a>
         </div>
         <div class="flex lg:hidden">
           <button id="mobileMenuButton" type="button"
@@ -179,55 +192,67 @@
       </div>
     </header>
 
-    <div class="relative isolate px-6 pt-14 lg:px-8">
-      <!-- Rest of your content -->
-      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true">
-        <div
-          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-        </div>
-      </div>
+    <div class="relative isolate px-6 pt-14 lg:px-8 flex">
+      <!-- Content on the left -->
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <!-- Existing content -->
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
           <div
-            class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span
-                class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+            class="relative rounded-full px-3 py-1 text-sm leading-6 text-white-600 ring-1 ring-white-900/10 hover:ring-white-900/20 animate_animated animate_fadeLeft">
+            The Orignal. <a href="#about" class="font-semibold text-indigo-600"><span class="absolute inset-0"
+                aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
         <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Clev Calc
+          <h1
+            class="text-4xl font-bold tracking-tight text-white-900 sm:text-6xl animate__animated animate__lightSpeedInLeft"
+            style="color: white;">
+            <span class="title">C</span><span class="title">l</span><span class="title">e</span><span
+              class="title">v</span>
+            <span class="title">C</span><span class="title">a</span><span class="title">l</span><span class="title">c</span>
           </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-600">The Engineering calculator</p>
+          <p class="mt-6 text-lg leading-8 text-white-600 animate__animated animate__lightSpeedInLeft"
+            style="color: white;">The Engineering
+            calculator</p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="./algebra.html"
-              class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
+              class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              style="color: white;">Get
               started</a>
-            <a href="#about" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
-                aria-hidden="true">→</span></a>
+            <a href="#about" class="text-sm font-semibold leading-6 text-white-900" style="color: white;">Learn more
+              <span aria-hidden="true">→</span></a>
           </div>
           <br />
           <br />
-
-          <img src="./images/featuress.jpeg" alt="scientific calculator">
+          <img class="block sm:hidden" src="./images/featuress.jpeg" alt="">
+          <br />
         </div>
       </div>
+
+      <!-- Image on the right -->
+      <div class="hidden lg:block">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.523/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/zIZP7EnVw8mGJWp6/scene.splinecode"></spline-viewer>
+      </div>
+
+
+
       <div
         class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true">
-        <div
-          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-        </div>
       </div>
     </div>
+
   </div>
+
+
+
   <!-- Cool Box Shadow just below the image -->
-  <div class="cool-box container mx-auto mt-8" id="about" style="font-family: 'Raleway', sans-serif;">
+  <div data-aos="flip-left" class="cool-box container mx-auto mt-8" id="about"
+    style="font-family: 'Raleway', sans-serif;">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <!-- Column 1 -->
-      <div class="bg-white p-6 shadow-md rounded-md">
+      <div data-aos="fade-left" class="bg-white p-6 shadow-md rounded-md">
         <!-- Content for Column 1 -->
         <h1 class="font-bold text-3xl text-gray-800 mb-4" style="font-family: 'Raleway', sans-serif;">The mission? Make
           the perfect calculator.</h1>
@@ -235,7 +260,7 @@
       </div>
 
       <!-- Column 2 -->
-      <div class="bg-white p-6 shadow-md rounded-md">
+      <div data-aos="fade-left" class="bg-white p-6 shadow-md rounded-md">
         <!-- Content for Column 2 -->
         <p class="text-gray-800" style="font-family: 'Raleway', sans-serif;">All-In-One Calculator is a simple, clean,
           and easy-to-use calculator with a complete set of tools for day-to-day life, such as a unit converter,
@@ -244,7 +269,7 @@
       </div>
 
       <!-- Column 3 -->
-      <div class="bg-white p-6 shadow-md rounded-md">
+      <div data-aos="fade-left" class="bg-white p-6 shadow-md rounded-md">
         <!-- Content for Column 3 -->
         <p class="text-gray-800" style="font-family: 'Raleway', sans-serif;">From simple or complex calculations to unit
           and currency conversions, percentages, proportions, areas, volumes, etc., it does it all. And it does it good!
@@ -258,7 +283,7 @@
   <br />
   <br />
 
-  <div class="bg-white py-24 sm:py-32" style="font-family: 'Raleway', sans-serif;">
+  <div data-aos="slide-left" class="bg-white py-24 sm:py-32" style="font-family: 'Raleway', sans-serif;">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
         <div class="mx-auto flex max-w-xs flex-col gap-y-4">
@@ -283,7 +308,7 @@
 
 
   <div class="features-section" id="features">
-    <a href="./algebra.html">
+    <a data-aos="fade-right" href="./algebra.html">
       <div class="feature">
         <img src="https://www.allinonecalculator.com/images/features/algebra.png" alt="Feature 1"
           style="font-family: 'Raleway', sans-serif;">
@@ -293,7 +318,7 @@
       </div>
     </a>
 
-    <a href="./geometry.html">
+    <a data-aos="fade-right" href="./geometry.html">
       <div class="feature">
         <img src="https://www.allinonecalculator.com/images/features/geometry.png" alt="Feature 2">
         <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Geometry</h3>
@@ -302,7 +327,7 @@
       </div>
     </a>
 
-    <a href="./unit-converter.html">
+    <a data-aos="fade-right" href="./unit-converter.html">
       <div class="feature">
         <img src="https://www.allinonecalculator.com/images/features/converters.png" alt="Feature 3">
         <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Unit Converters</h3>
@@ -313,7 +338,7 @@
 
     <!-- Repeat the structure for the next three elements -->
 
-    <a href="./finance.html">
+    <a data-aos="fade-right" href="./finance.html">
       <div class="feature">
         <img src="https://www.allinonecalculator.com/images/features/finance.png" alt="Feature 1">
         <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Finance</h3>
@@ -322,7 +347,7 @@
       </div>
     </a>
 
-    <a href="./health.html">
+    <a data-aos="fade-right" href="./health.html">
       <div class="feature">
         <img src="https://www.allinonecalculator.com/images/features/health.png" alt="Feature 2">
         <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Health</h3>
@@ -331,7 +356,7 @@
       </div>
     </a>
 
-    <a href="./misc.html">
+    <a data-aos="fade-right" href="./misc.html">
       <div class="feature">
         <img src="https://www.allinonecalculator.com/images/features/miscellaneous.png" alt="Feature 3">
         <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Miscellaneous
@@ -360,13 +385,9 @@
   }
   ```
 -->
-  <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+  <div data-aos="zoom-in-left" class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8" style="background-color: #f7f7f7;">
     <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       aria-hidden="true">
-      <div
-        class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
-        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-      </div>
     </div>
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact</h2>
@@ -457,34 +478,65 @@
     </form>
   </div>
 
-  <footer class="new_footer_area bg_color" id="contact">
-    <div class="new_footer_top">
-      <div class="container">
-        <div class="row">
-          <!-- First Author -->
-          <div class="col-lg-3 col-md-6">
-            <div class="f_widget social-widget pl_70 text-center wow fadeInLeft" data-wow-delay="0.8s"
-              style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
-              <h4 class="f-title f_600 t_color f_size_18"
-                style="margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">© ClevCalc</h4>
-              <h4 class="f-title f_600 t_color f_size_18"
-                style="margin-bottom: 5px; font-family: 'Montserrat', sans-serif;">Privacy Policy - Terms & Conditions
-              </h4>
-              <h4 class="f-title f_600 t_color f_size_18" style="font-family: 'Montserrat', sans-serif;">Made by -
-                Abhinav Bhatt, Aman Singh & Ashish Kumar Sahoo</h4>
-              <!-- Add any additional information about the first author if needed -->
-            </div>
-          </div>
-        </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="col1">
+        <a href="#" class="brand">Clev-Calc</a>
+        <ul class="media-icons">
+          <li>
+            <a href="https://www.youtube.com/channel/UC3Afh_9HnrccLCsfO9HSJfQ"><img src="./images/yt.png" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/discord.png" alt=""></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ashish_4k_mx/"><img src="./images/insta.png" alt=""></a>
+          </li>
+          <li>
+            <a href="https://github.com/ashish4kmax"><img src="./images/git.png" alt=""></i></a>
+          </li>
+        </ul>
       </div>
-
-      <!-- Animating Part -->
-      <div class="footer_bg">
-        <div class="footer_bg_one"></div>
-        <div class="footer_bg_two"></div>
+      <div class="col2">
+        <ul class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <p>We hope you liked our services any further questions can mail us in the given box.</p>
+        </ul>
+      </div>
+      <div class="col3">
+        <p>Subscribe to our newslatter</p>
+        <form>
+          <div class="input-wrap">
+            <input type="email" placeholder="ex@gmail.com" /><button type="submit"><i
+                class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </form>
+        <ul class="services-icons">
+          <li>
+            <a href="#"><i class="fa-brands fa-cc-paypal"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-cc-apple-pay"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-google-pay"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-cc-amazon-pay"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="mekk">
+        <p>@Clev Calc 2023 - All Rights Reserved</p>
       </div>
     </div>
   </footer>
+  
   <script>
     document.getElementById('mobileMenuButton').addEventListener('click', function () {
       document.getElementById('mobileMenu').classList.toggle('hidden');
@@ -495,6 +547,10 @@
       document.getElementById('mobileMenu').classList.add('hidden');
       document.querySelector('.overlay').classList.add('hidden');
     });
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 </body>
 
