@@ -82,14 +82,24 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      margin-left: 190px;
       /* Adjust the gap between items as needed */
 
       /* Responsive layout for mobile */
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
+        margin: 18px;
         /* One column in mobile view */
       }
+
+      /* Responsive layout for tablets */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 40px;
+        /* Three columns in tablet view */
+      }
     }
+
 
     .feature {
       /* Your styling for each feature item */
@@ -156,13 +166,14 @@
               <span class="sr-only">Your Company</span>
               <img class="h-8 w-auto" src="https://www.allinonecalculator.com/images/logo.png" alt="">
             </a>
-            <button id="closeMobileMenu" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <button id="closeMobileMenu" type="button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
               <span class="sr-only">Close menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                 aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
+
           </div>
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
@@ -181,16 +192,16 @@
                   style="font-family: 'Raleway', sans-serif;">Contact</a>
               </div>
               <div class="py-6">
-                <a href="#"
+                <a href="#contact"
                   class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 hover:bg-blue-700"
-                  style="font-family: 'Raleway', sans-serif;">Log
-                  in</a>
+                  style="font-family: 'Raleway', sans-serif;">Log in</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+
 
     <div class="relative isolate px-6 pt-14 lg:px-8 flex">
       <!-- Content on the left -->
@@ -209,7 +220,8 @@
             style="color: white;">
             <span class="title">C</span><span class="title">l</span><span class="title">e</span><span
               class="title">v</span>
-            <span class="title">C</span><span class="title">a</span><span class="title">l</span><span class="title">c</span>
+            <span class="title">C</span><span class="title">a</span><span class="title">l</span><span
+              class="title">c</span>
           </h1>
           <p class="mt-6 text-lg leading-8 text-white-600 animate__animated animate__lightSpeedInLeft"
             style="color: white;">The Engineering
@@ -308,63 +320,162 @@
 
 
   <div class="features-section" id="features">
-    <a data-aos="fade-right" href="./algebra.html">
-      <div class="feature">
-        <img src="https://www.allinonecalculator.com/images/features/algebra.png" alt="Feature 1"
-          style="font-family: 'Raleway', sans-serif;">
-        <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Algebra</h3>
-        <p style="font-family: 'Raleway', sans-serif;">Solve linear, quadratic or equation systems. Calculate
-          percentages, proportions and ratios. Find out means. Convert decimals to fractions. Check prime numbers.</p>
+    <div data-aos="fade-right"
+      class="max-w-sm bg-white border border-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img class="rounded-t-lg" src="https://cdn-icons-png.flaticon.com/512/2231/2231643.png" alt=""
+          style="margin-left: 18px; margin-top:20px" width="90px" />
+      </a>
+      <div class="p-5">
+        <a href="./algebra.html">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Algebra</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Solve linear, quadratic or equation systems.
+          Calculate percentages, proportions and ratios. Find out means. Convert
+          decimals to fractions. Check prime numbers.</p>
+        <a href="./algebra.html"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </a>
       </div>
-    </a>
+    </div>
 
-    <a data-aos="fade-right" href="./geometry.html">
-      <div class="feature">
-        <img src="https://www.allinonecalculator.com/images/features/geometry.png" alt="Feature 2">
-        <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Geometry</h3>
-        <p style="font-family: 'Raleway', sans-serif;">Calculate required dimensions for all the common 2D shapes and 3D
-          bodies using known variables. Solve the right triangle. Get step by step solutions.</p>
-      </div>
-    </a>
 
-    <a data-aos="fade-right" href="./unit-converter.html">
-      <div class="feature">
-        <img src="https://www.allinonecalculator.com/images/features/converters.png" alt="Feature 3">
-        <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Unit Converters</h3>
-        <p style="font-family: 'Raleway', sans-serif;">Easily convert between all the common units on the same screen.
-          Convert shoe and ring sizes, roman numerals or numeric bases.</p>
+    <div data-aos="fade-right"
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img class="rounded-t-lg"
+          src="https://cdn-icons-png.flaticon.com/512/1080/1080982.png?ga=GA1.1.1368590504.1702805974" alt=""
+          style="margin-left: 18px; margin-top:20px" width="90px" />
+      </a>
+      <div class="p-5">
+        <a href="./geometry.html">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Geometry</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Calculate required dimensions for all the common 2D
+          shapes and 3D bodies using known variables. Solve the right
+          triangle. Get step by step solutions.</p>
+        <a href="./geometry.html"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </a>
       </div>
-    </a>
+    </div>
+
+    <div data-aos="fade-right"
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img class="rounded-t-lg"
+          src="https://cdn-icons-png.flaticon.com/512/5065/5065419.png?ga=GA1.1.1368590504.1702805974" alt=""
+          style="margin-left: 18px; margin-top:20px" width="90px" />
+      </a>
+      <div class="p-5">
+        <a href="./unit-converter.html">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Unit Converters</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Easily convert between all the common units on the
+          same screen. Convert shoe and ring sizes, roman numerals or numeric
+          bases.</p>
+        <a href="./unit-converter.html"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </a>
+      </div>
+    </div>
 
     <!-- Repeat the structure for the next three elements -->
 
-    <a data-aos="fade-right" href="./finance.html">
-      <div class="feature">
-        <img src="https://www.allinonecalculator.com/images/features/finance.png" alt="Feature 1">
-        <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Finance</h3>
-        <p style="font-family: 'Raleway', sans-serif;">Convert up to +160 currencies, even offline. Calculate sales tax
-          and unit price. Find out the tip for a bill. Calculate loan and interest.</p>
+    <div data-aos="fade-right"
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="./finance.html">
+        <img class="rounded-t-lg"
+          src="https://cdn-icons-png.flaticon.com/512/781/781760.png?ga=GA1.1.1368590504.1702805974" alt=""
+          style="margin-left: 18px; margin-top:20px" width="90px" />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Finance</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Convert up to +160 currencies, even offline.
+          Calculate sales tax and unit price. Find out the tip for a bill. Calculate
+          loan and interest.</p>
+        <a href="./finance.html"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </a>
       </div>
-    </a>
+    </div>
 
-    <a data-aos="fade-right" href="./health.html">
-      <div class="feature">
-        <img src="https://www.allinonecalculator.com/images/features/health.png" alt="Feature 2">
-        <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Health</h3>
-        <p style="font-family: 'Raleway', sans-serif;">Calculate your body mass index. Calculate how much calories you
-          are burning in a day. Find out your body fat percentage.</p>
+    <div data-aos="fade-right"
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img class="rounded-t-lg"
+          src="https://cdn-icons-png.flaticon.com/512/2927/2927071.png?ga=GA1.1.1368590504.1702805974" alt=""
+          style="margin-left: 18px; margin-top:20px" width="90px" />
+      </a>
+      <div class="p-5">
+        <a href="./health.html">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Health</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Calculate your body mass index. Calculate how much
+          calories you are burning in a day. Find out your body fat percentage.</p>
+        <a href="./health.html"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </a>
       </div>
-    </a>
+    </div>
 
-    <a data-aos="fade-right" href="./misc.html">
-      <div class="feature">
-        <img src="https://www.allinonecalculator.com/images/features/miscellaneous.png" alt="Feature 3">
-        <h3 class="text-2xl" style="font-family: 'Raleway', sans-serif;">Miscellaneous
-        </h3>
-        <p style="font-family: 'Raleway', sans-serif;">Find out the distance in time between two dates. Find out how old
-          you are in years, months and days. Calculate your car's mileage. Solve Ohm's law.</p>
+    <div data-aos="fade-right"
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img class="rounded-t-lg"
+          src="https://cdn-icons-png.flaticon.com/512/4030/4030236.png?ga=GA1.1.1368590504.1702805974" alt=""
+          style="margin-left: 18px; margin-top:20px" width="90px" />
+      </a>
+      <div class="p-5">
+        <a href="./misc.html">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Miscellaneous</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Find out the distance in time between two dates.
+          Find out how old you are in years, months and days. Calculate your
+          car's mileage. Solve Ohm's law.</p>
+        <a href="./misc.html"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </a>
       </div>
-    </a>
+    </div>
   </div>
   <br />
   <br />
@@ -478,22 +589,23 @@
     </form>
   </div>
 
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="container">
       <div class="col1">
-        <a href="#" class="brand">Clev-Calc</a>
+        <a href="./index.html" class="brand">Clev-Calc</a>
         <ul class="media-icons">
           <li>
-            <a href="https://www.youtube.com/channel/UC3Afh_9HnrccLCsfO9HSJfQ"><img src="./images/yt.png" alt=""></a>
+            <a href="https://www.youtube.com/channel/UC3Afh_9HnrccLCsfO9HSJfQ"><img src="./images/youtube.png" alt=""
+                width="25px"></a>
           </li>
           <li>
-            <a href="#"><img src="./images/discord.png" alt=""></a>
+            <a href="#"><img src="./images/discord.png" alt="" width="25px"></a>
           </li>
+          <!-- <li>
+            <a href="https://www.instagram.com/ashish_4k_mx/"><i class="fi fi-brands-instagram"></i></a>
+          </li> -->
           <li>
-            <a href="https://www.instagram.com/ashish_4k_mx/"><img src="./images/insta.png" alt=""></a>
-          </li>
-          <li>
-            <a href="https://github.com/ashish4kmax"><img src="./images/git.png" alt=""></i></a>
+            <a href="https://github.com/ashish4kmax"><img src="./images/github.png" alt="" width="25px"></a>
           </li>
         </ul>
       </div>
@@ -536,7 +648,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script>
     document.getElementById('mobileMenuButton').addEventListener('click', function () {
       document.getElementById('mobileMenu').classList.toggle('hidden');
@@ -551,6 +663,27 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    // Get the mobile menu and close button elements
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMobileMenuButton = document.getElementById('closeMobileMenu');
+
+    // Get all mobile navigation links
+    const mobileNavLinks = document.querySelectorAll('#mobileMenu a');
+
+    // Function to close the mobile menu
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+
+    // Add click event listener to each mobile navigation link
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Add click event listener to the close button
+    closeMobileMenuButton.addEventListener('click', closeMobileMenu);
   </script>
 </body>
 
